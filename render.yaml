@@ -1,7 +1,7 @@
 services:
   - type: web
     name: arabic-vocabulary-backend
-    runtime: java
+    env: java
     rootDir: vocabulary
     plan: free
     buildCommand: chmod +x ./mvnw && ./mvnw clean package -DskipTests
