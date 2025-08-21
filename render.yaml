@@ -1,7 +1,7 @@
 services:
   - type: web
     name: arabic-vocabulary-backend
-    runtime: java17  # atau java17, java11
+    runtime: java21
     rootDir: vocabulary
     plan: free
     buildCommand: chmod +x ./mvnw && ./mvnw clean package -DskipTests
