@@ -1,15 +1,15 @@
 services:
   - type: web
     name: arabic-vocabulary-backend
-    env: java
+    runtime: java
     rootDir: vocabulary
     plan: free
-    buildCommand: ./mvnw clean package -DskipTests
+    buildCommand: chmod +x ./mvnw && ./mvnw clean package -DskipTests
     startCommand: java -jar target/*.jar
     envVars:
       - key: DB_URL
         sync: false
-      - key: DB_USER
+      - key: DB_USER  
         sync: false
       - key: DB_PASS
         sync: false
